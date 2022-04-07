@@ -13,3 +13,6 @@
 [submodule "Pinopticap"]
 	path = Pinopticap
 	url = git@github.com:n1ckfg/Pinopticap
+[submodule "Pinoptipose"]
+	path = Pinoptipose
+	url = git@github.com:n1ckfg/Pinoptipose
