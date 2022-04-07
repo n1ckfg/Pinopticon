@@ -1,0 +1,15 @@
+[submodule "Pinopticon"]
+	path = Pinopticon
+	url = git@github.com:n1ckfg/Pinopticon
+[submodule "Pinopticam"]
+	path = Pinopticam
+	url = git@github.com:n1ckfg/Pinopticam
+[submodule "Pinoptigrab"]
+	path = Pinoptigrab
+	url = git@github.com:n1ckfg/Pinoptigrab
+[submodule "Pinoptisense"]
+	path = Pinoptisense
+	url = git@github.com:n1ckfg/Pinoptisense
+[submodule "Pinopticap"]
+	path = Pinopticap
+	url = git@github.com:n1ckfg/Pinopticap
