@@ -2,17 +2,23 @@
 	path = Pinopticon
 	url = https://github.com/n1ckfg/Pinopticon
 [submodule "Pinopticam"]
-	path = Pinopticam
+	path = mipicam/Pinopticam
 	url = https://github.com/n1ckfg/Pinopticam
 [submodule "Pinoptigrab"]
-	path = Pinoptigrab
+	path = webcam/Pinoptigrab
 	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
-	path = Pinoptisense
+	path = realsense/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinopticap"]
 	path = Pinopticap
 	url = https://github.com/n1ckfg/Pinopticap
 [submodule "Pinoptipose"]
-	path = Pinoptipose
+	path = skeleton/Pinoptipose
 	url = https://github.com/n1ckfg/Pinoptipose
+[submodule "PiXtionApps"]
+	path = PiXtionApps
+	url = https://github.com/n1ckfg/PiXtionApps
+[submodule "PiAstraApps"]
+	path = PiAstraApps
+	url = https://github.com/n1ckfg/PiAstraApps
