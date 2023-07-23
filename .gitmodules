@@ -22,3 +22,6 @@
 [submodule "PiAstraApps"]
 	path = PiAstraApps
 	url = https://github.com/n1ckfg/PiAstraApps
+[submodule "PiVideoApps"]
+	path = PiVideoApps
+	url = https://github.com/n1ckfg/PiVideoApps
