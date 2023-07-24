@@ -1,4 +1,5 @@
 # Pinopticon
+<img src="./docs/images/logo3.png"><br>
 Demo at https://vimeo.com/394259350 
 
 ### Pinopticam
