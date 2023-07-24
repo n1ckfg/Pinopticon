@@ -26,3 +26,18 @@
 	path = PiVideoApps
 	url = git@github.com:n1ckfg/PiVideoApps
 
+[submodule "tools/pi-midi-tools"]
+	path = tools/pi-midi-tools
+	url = git@github.com:n1ckfg/pi-midi-tools
+[submodule "pd/PdPitcher"]
+	path = pd/PdPitcher
+	url = git@github.com:n1ckfg/PdPitcher
+[submodule "tools/rpi_tensorflow_lite"]
+	path = tools/rpi_tensorflow_lite
+	url = git@github.com:n1ckfg/rpi_tensorflow_lite
+[submodule "omx/PiStreamCam"]
+	path = omx/PiStreamCam
+	url = git@github.com:n1ckfg/PiStreamCam
+[submodule "tools/PiDisplaceExample"]
+	path = tools/PiDisplaceExample
+	url = git@github.com:n1ckfg/PiDisplaceExample
