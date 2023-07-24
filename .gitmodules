@@ -1,5 +1,5 @@
 [submodule "Pinopticap"]
-	path = Pinopticap
+	path = servers/Pinopticap
 	url = git@github.com:n1ckfg/Pinopticap
 [submodule "Pinopticam"]
 	path = mipicam/Pinopticam
