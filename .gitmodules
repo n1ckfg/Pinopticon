@@ -1,27 +1,27 @@
 [submodule "Pinopticon"]
 	path = Pinopticon
-	url = https://github.com/n1ckfg/Pinopticon
+	url = git@github.com:n1ckfg/Pinopticon
 [submodule "Pinopticam"]
 	path = mipicam/Pinopticam
-	url = https://github.com/n1ckfg/Pinopticam
+	url = git@github.com:n1ckfg/Pinopticam
 [submodule "Pinoptigrab"]
 	path = webcam/Pinoptigrab
-	url = https://github.com/n1ckfg/Pinoptigrab
+	url = git@github.com:n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
 	path = realsense/Pinoptisense
-	url = https://github.com/n1ckfg/Pinoptisense
-[submodule "Pinopticap"]
-	path = Pinopticap
-	url = https://github.com/n1ckfg/Pinopticap
+	url = git@github.com:n1ckfg/Pinoptisense
+[submodule "Pinoptimon"]
+	path = Pinoptimon
+	url = git@github.com:n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
 	path = skeleton/Pinoptipose
-	url = https://github.com/n1ckfg/Pinoptipose
+	url = git@github.com:n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
 	path = PiXtionApps
-	url = https://github.com/n1ckfg/PiXtionApps
+	url = git@github.com:n1ckfg/PiXtionApps
 [submodule "PiAstraApps"]
 	path = PiAstraApps
-	url = https://github.com/n1ckfg/PiAstraApps
+	url = git@github.com:n1ckfg/PiAstraApps
 [submodule "PiVideoApps"]
 	path = PiVideoApps
-	url = https://github.com/n1ckfg/PiVideoApps
+	url = git@github.com:n1ckfg/PiVideoApps
