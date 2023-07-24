@@ -1,14 +1,14 @@
-# Pinoptikit
+# Pinopticon
 Demo at https://vimeo.com/394259350 
 
 ### Pinopticam
 Stream video and tracking data using the RPi MIPI camera.
 
-### Pinopticon
+### Pinopticap
 Receive tracking data.
 
-### Pinopticap
-View and record video.
+### Pinoptimon
+View mjpeg video.
 
 ### Pinoptigrab
 Access a USB camera.
