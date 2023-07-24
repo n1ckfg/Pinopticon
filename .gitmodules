@@ -1,6 +1,6 @@
-[submodule "Pinopticon"]
-	path = Pinopticon
-	url = git@github.com:n1ckfg/Pinopticon
+[submodule "Pinopticap"]
+	path = Pinopticap
+	url = git@github.com:n1ckfg/Pinopticap
 [submodule "Pinopticam"]
 	path = mipicam/Pinopticam
 	url = git@github.com:n1ckfg/Pinopticam
@@ -11,7 +11,7 @@
 	path = realsense/Pinoptisense
 	url = git@github.com:n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
-	path = Pinoptimon
+	path = servers/Pinoptimon
 	url = git@github.com:n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
 	path = skeleton/Pinoptipose
@@ -25,3 +25,4 @@
 [submodule "PiVideoApps"]
 	path = PiVideoApps
 	url = git@github.com:n1ckfg/PiVideoApps
+
