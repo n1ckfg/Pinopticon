@@ -1,43 +1,43 @@
 [submodule "Pinopticap"]
 	path = servers/Pinopticap
-	url = git@github.com:n1ckfg/Pinopticap
+	url = https://github.com/n1ckfg/Pinopticap
 [submodule "Pinopticam"]
 	path = mipicam/Pinopticam
-	url = git@github.com:n1ckfg/Pinopticam
+	url = https://github.com/n1ckfg/Pinopticam
 [submodule "Pinoptigrab"]
 	path = webcam/Pinoptigrab
-	url = git@github.com:n1ckfg/Pinoptigrab
+	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
 	path = realsense/Pinoptisense
-	url = git@github.com:n1ckfg/Pinoptisense
+	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
 	path = servers/Pinoptimon
-	url = git@github.com:n1ckfg/Pinoptimon
+	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
 	path = skeleton/Pinoptipose
-	url = git@github.com:n1ckfg/Pinoptipose
+	url = https://github.com/n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
 	path = PiXtionApps
-	url = git@github.com:n1ckfg/PiXtionApps
+	url = https://github.com/n1ckfg/PiXtionApps
 [submodule "PiAstraApps"]
 	path = PiAstraApps
-	url = git@github.com:n1ckfg/PiAstraApps
+	url = https://github.com/n1ckfg/PiAstraApps
 [submodule "PiVideoApps"]
 	path = PiVideoApps
-	url = git@github.com:n1ckfg/PiVideoApps
+	url = https://github.com/n1ckfg/PiVideoApps
 
 [submodule "tools/pi-midi-tools"]
 	path = tools/pi-midi-tools
-	url = git@github.com:n1ckfg/pi-midi-tools
+	url = https://github.com/n1ckfg/pi-midi-tools
 [submodule "pd/PdPitcher"]
 	path = pd/PdPitcher
-	url = git@github.com:n1ckfg/PdPitcher
+	url = https://github.com/n1ckfg/PdPitcher
 [submodule "tools/rpi_tensorflow_lite"]
 	path = tools/rpi_tensorflow_lite
-	url = git@github.com:n1ckfg/rpi_tensorflow_lite
+	url = https://github.com/n1ckfg/rpi_tensorflow_lite
 [submodule "omx/PiStreamCam"]
 	path = omx/PiStreamCam
-	url = git@github.com:n1ckfg/PiStreamCam
+	url = https://github.com/n1ckfg/PiStreamCam
 [submodule "tools/PiDisplaceExample"]
 	path = tools/PiDisplaceExample
-	url = git@github.com:n1ckfg/PiDisplaceExample
+	url = https://github.com/n1ckfg/PiDisplaceExample
