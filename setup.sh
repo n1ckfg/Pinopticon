@@ -10,6 +10,8 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
+git pull
+
 git submodule init
 git submodule update --init --recursive
 git submodule sync
