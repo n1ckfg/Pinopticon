@@ -1,61 +1,61 @@
 [submodule "Pinopticap"]
-	path = servers/Pinopticap
+	path = core/server/Pinopticap
 	url = https://github.com/n1ckfg/Pinopticap
 [submodule "Pinopticam"]
-	path = mipicam/Pinopticam
+	path = core/mipicam/Pinopticam
 	url = https://github.com/n1ckfg/Pinopticam
 [submodule "Pinoptigrab"]
-	path = webcam/Pinoptigrab
+	path = core/webcam/Pinoptigrab
 	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
-	path = realsense/Pinoptisense
+	path = core/realsense/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
-	path = servers/Pinoptimon
+	path = core/server/Pinoptimon
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
-	path = skeleton/Pinoptipose
+	path = core/skeleton/Pinoptipose
 	url = https://github.com/n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
-	path = PiXtionApps
+	path = experimental/PiXtionApps
 	url = https://github.com/n1ckfg/PiXtionApps
 [submodule "PiAstraApps"]
-	path = PiAstraApps
+	path = experimental/PiAstraApps
 	url = https://github.com/n1ckfg/PiAstraApps
 [submodule "PiVideoApps"]
-	path = PiVideoApps
+	path = experimental/PiVideoApps
 	url = https://github.com/n1ckfg/PiVideoApps
 
 [submodule "tools/pi-midi-tools"]
-	path = tools/pi-midi-tools
+	path = experimental/tools/pi-midi-tools
 	url = https://github.com/n1ckfg/pi-midi-tools
 [submodule "pd/PdPitcher"]
-	path = pd/PdPitcher
+	path = experimental/pd/PdPitcher
 	url = https://github.com/n1ckfg/PdPitcher
 [submodule "tools/rpi_tensorflow_lite"]
-	path = tools/rpi_tensorflow_lite
+	path = experimental/tools/rpi_tensorflow_lite
 	url = https://github.com/n1ckfg/rpi_tensorflow_lite
 [submodule "omx/PiStreamCam"]
-	path = omx/PiStreamCam
+	path = experimental/omx/PiStreamCam
 	url = https://github.com/n1ckfg/PiStreamCam
 [submodule "tools/PiDisplaceExample"]
-	path = tools/PiDisplaceExample
+	path = experimental/tools/PiDisplaceExample
 	url = https://github.com/n1ckfg/PiDisplaceExample
 [submodule "omx/PiHoleCam"]
-	path = omx/PiHoleCam
+	path = experimental/omx/PiHoleCam
 	url = https://github.com/n1ckfg/PiHoleCam
 [submodule "deprecated/PiMocapCam"]
-	path = deprecated/PiMocapCam
+	path = experimental/mipicam/PiMocapCam
 	url = https://github.com/n1ckfg/PiMocapCam
 [submodule "deprecated/PiMocapUnity"]
-	path = deprecated/PiMocapUnity
+	path = experimental/server/PiMocapUnity
 	url = https://github.com/n1ckfg/PiMocapUnity
 [submodule "mipicam/PiDoubleCam"]
-	path = mipicam/PiDoubleCam
+	path = experimental/mipicam/PiDoubleCam
 	url = https://github.com/n1ckfg/PiDoubleCam
 [submodule "mipicam/PiProjectorCam"]
-	path = mipicam/PiProjectorCam
+	path = experimental/mipicam/PiProjectorCam
 	url = https://github.com/n1ckfg/PiProjectorCam
 [submodule "mipicam/PiDirCam"]
-	path = mipicam/PiDirCam
+	path = experimental/mipicam/PiDirCam
 	url = https://github.com/n1ckfg/PiDirCam
