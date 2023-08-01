@@ -59,3 +59,6 @@
 [submodule "mipicam/PiDirCam"]
 	path = experimental/mipicam/PiDirCam
 	url = https://github.com/n1ckfg/PiDirCam
+[submodule "experimental/tools/pinopticap_ray_test"]
+	path = experimental/tools/pinopticap_ray_test
+	url = https://github.com/n1ckfg/pinopticap_ray_test
