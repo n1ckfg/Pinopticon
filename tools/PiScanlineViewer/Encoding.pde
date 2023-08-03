@@ -64,11 +64,19 @@ String[] splitByChar(String[] s, String delim) {
 // https://www.mkyong.com/java/how-to-convert-byte-to-bufferedimage-in-java/
 // https://stackoverflow.com/questions/2305966/why-do-i-get-the-unhandled-exception-type-ioexception
 
-PImage decodePImageFromBase64(String i_Image64) {
+ByteArrayInputStream byteStreamFromBase64(String input) {
+  byte[] decodedBytes = Base64.getDecoder().decode(input);
+  return new ByteArrayInputStream(decodedBytes);
+}
+
+byte[] byteArrayFromBase64(String input) {
+  return byteStreamFromBase64(input).readAllBytes();
+}
+
+PImage decodePImageFromBase64(String input) {
   PImage returns = null;
   try {
-    byte[] decodedBytes = Base64.getDecoder().decode(i_Image64);
-    ByteArrayInputStream in = new ByteArrayInputStream(decodedBytes);
+    ByteArrayInputStream in = byteStreamFromBase64(input);
     BufferedImage bImageFromConvert = ImageIO.read(in);
     BufferedImage convertedImg = new BufferedImage(bImageFromConvert.getWidth(), bImageFromConvert.getHeight(), BufferedImage.TYPE_INT_ARGB);
     convertedImg.getGraphics().drawImage(bImageFromConvert, 0, 0, null);
@@ -79,10 +87,58 @@ PImage decodePImageFromBase64(String i_Image64) {
 
 String decodeStringFromBase64(String input) {
   String returns = null;
-  byte[] decodedBytes = Base64.getDecoder().decode(input);
-  ByteArrayInputStream in = new ByteArrayInputStream(decodedBytes);
+  ByteArrayInputStream in = byteStreamFromBase64(input);
   returns = in.toString();
   return returns;
+}
+
+color decodeColorFromBytes(byte[] readColorBytes) {
+  byte[] bytesR = { readColorBytes[0], readColorBytes[1], readColorBytes[2], readColorBytes[3] };
+  byte[] bytesG = { readColorBytes[4], readColorBytes[5], readColorBytes[6], readColorBytes[7] };
+  byte[] bytesB = { readColorBytes[8], readColorBytes[9], readColorBytes[10], readColorBytes[11] };
+  
+  float r = asFloat(bytesR);
+  float g = asFloat(bytesG);
+  float b = asFloat(bytesB);
+  
+  color col = color(255);
+  if (!Float.isNaN(r) && !Float.isNaN(g) && !Float.isNaN(b)) {
+    col = color(r,g,b);
+  }
+  
+  return col;  
+}
+
+ArrayList<PVector> decodePointsFromBytes(byte[] readPointsBytes) {
+    ArrayList<PVector> points = new ArrayList<PVector>();
+    
+    for (int i = 0; i < readPointsBytes.length; i += 12) { //+=16) { 
+      byte[] bytesX = { readPointsBytes[i], readPointsBytes[i+1], readPointsBytes[i+2], readPointsBytes[i+3] };
+      byte[] bytesY = { readPointsBytes[i+4], readPointsBytes[i+5], readPointsBytes[i+6], readPointsBytes[i+7] };
+      byte[] bytesZ = { readPointsBytes[i+8], readPointsBytes[i+9], readPointsBytes[i+10], readPointsBytes[i+11] };
+      //byte[] bytesW = { readPointsBytes[i+12], readPointsBytes[i+13], readPointsBytes[i+14], readPointsBytes[i+15] };
+
+      float x = asFloat(bytesX);
+      float y = asFloat(bytesY);
+      float z = asFloat(bytesZ);
+      //float w = asFloat(bytesW);
+      
+      if (!Float.isNaN(x) && !Float.isNaN(y)) { // && !Float.isNaN(z)) {
+        PVector p = new PVector(x, y, z);
+        points.add(p);
+        //println(p.x + ", " + p.y + ", " + p.z);
+      }
+    }
+    
+    return points;
+}
+
+color decodeColorFromBase64(String input) {
+  return decodeColorFromBytes(byteArrayFromBase64(input));
+}
+
+ArrayList<PVector> decodePointsFromBase64(String input) {
+  return decodePointsFromBytes(byteArrayFromBase64(input));
 }
 
 // https://stackoverflow.com/questions/4513498/java-bytes-to-floats-ints
