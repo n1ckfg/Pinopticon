@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document version="1.5.0">
+  <chunk label="Chunk 1" enabled="true">
+    <sensors next_id="1">
+      <sensor id="0" label="unknown" type="frame">
+        <resolution width="640" height="480"/>
+        <property name="layer_index" value="0"/>
+        <bands>
+          <band/>
+        </bands>
+        <data_type>uint8</data_type>
+        <calibration type="frame" class="adjusted">
+          <resolution width="640" height="480"/>
+          <f>499.19968536665488</f>
+        </calibration>
+        <covariance>
+          <params>f</params>
+          <coeffs>2.1251594636233545e+01</coeffs>
+        </covariance>
+      </sensor>
+    </sensors>
+    <cameras next_id="4" next_group_id="0">
+      <camera id="0" sensor_id="0" label="nfg-rpi-3-1_photo_72902">
+        <transform>9.9533019370377351e-01 -5.1126228734592761e-03 9.6393291203081696e-02 -1.6256127005717600e+00 -9.6441307447489820e-03 -9.9886691033706920e-01 4.6603499609535304e-02 -1.5148253441524540e-03 9.6045802843156627e-02 -4.7315499796911589e-02 -9.9425170215352510e-01 -3.6504774764931558e-01 0 0 0 1</transform>
+      </camera>
+      <camera id="1" sensor_id="0" label="nfg-rpi-3-2_photo_71324">
+        <transform>9.8365997039035613e-01 -6.0825779183474732e-03 1.7993350132065733e-01 -1.2940796903290455e+00 4.6557816866533369e-03 -9.9823545357614207e-01 -5.9197152976472267e-02 9.2868593084591589e-01 1.7997607159989354e-01 5.9067600844294077e-02 -9.8189593755243165e-01 -3.7816507592679355e-01 0 0 0 1</transform>
+        <rotation_covariance>2.7157177844428325e-06 5.6763435860409287e-07 1.5541736705063497e-07 5.6763435860409309e-07 1.7663361066027563e-06 -2.1147677359876733e-07 1.5541736705063489e-07 -2.1147677359876730e-07 9.3271939612961768e-07</rotation_covariance>
+        <location_covariance>5.9223812292446195e-05 -1.6960570095200861e-05 3.7234428398901222e-05 -1.6960570095200861e-05 6.8478416925604396e-05 -1.9872414321041728e-05 3.7234428398901222e-05 -1.9872414321041728e-05 7.8509783167285394e-05</location_covariance>
+      </camera>
+      <camera id="2" sensor_id="0" label="nfg-rpi-3-3_photo_74222">
+        <transform>9.8955884816861617e-01 -2.3539386188798847e-02 1.4219417466639067e-01 -6.3307325894839436e-02 -1.4984561565262667e-02 -9.9802912978990632e-01 -6.0937008504683976e-02 -1.6123067328023554e-02 1.4334834817987360e-01 5.8170038582226247e-02 -9.8796128349518042e-01 -2.5251352441878810e-01 0 0 0 1</transform>
+        <rotation_covariance>1.6914654085743509e-06 -3.9526695523506957e-07 4.7407800391781280e-07 -3.9526695523506952e-07 7.9909745157328091e-06 2.5863270932036249e-07 4.7407800391781280e-07 2.5863270932036238e-07 1.3923665771807638e-06</rotation_covariance>
+        <location_covariance>1.0217312661167763e-04 -4.0955667481231775e-05 4.3036253933208742e-05 -4.0955667481231775e-05 1.0086625293031767e-04 -2.5562519824535591e-06 4.3036253933208742e-05 -2.5562519824535591e-06 7.7142668532385634e-05</location_covariance>
+      </camera>
+      <camera id="3" sensor_id="0" label="nfg-rpi-3-4_photo_68332">
+        <transform>9.8462629568173399e-01 2.8983990301679044e-02 1.7225268113518533e-01 -3.5372013442475159e-01 4.3503206588128306e-02 -9.9575434031191024e-01 -8.1121912986215017e-02 9.3157139828642355e-01 1.6917011813147820e-01 8.7368312655015767e-02 -9.8170680402816657e-01 -2.7491266401618863e-01 0 0 0 1</transform>
+        <rotation_covariance>3.0771956305145500e-06 1.9405983401902944e-06 5.7607624304161461e-07 1.9405983401902949e-06 5.6683464792332705e-06 -5.2618058218153855e-07 5.7607624304161450e-07 -5.2618058218153855e-07 1.8004153472363999e-06</rotation_covariance>
+        <location_covariance>4.3986683645299383e-05 -6.1871465144620145e-05 1.9804450746766642e-05 -6.1871465144620159e-05 8.7438965690113187e-05 -3.2110002046100169e-05 1.9804450746766638e-05 -3.2110002046100176e-05 5.2945719648444381e-05</location_covariance>
+      </camera>
+    </cameras>
+    <reference>LOCAL_CS["Local Coordinates (m)",LOCAL_DATUM["Local Datum",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</reference>
+    <region>
+      <center>1.7292037727388216e+00 1.7458071526565211e-01 -8.5223447281729179e+00</center>
+      <size>1.3180293015180299e+01 1.0297934106851210e+01 5.4697301547610628e+00</size>
+      <R>-8.7308060298402757e-01 4.7017022420029597e-01 1.2911320989151584e-01 -2.4492807752372081e-01 -6.5189563920679316e-01 7.1766448457736920e-01 4.2159281010660216e-01 5.9495549065338504e-01 6.8431532688360008e-01</R>
+    </region>
+    <settings>
+      <property name="accuracy_tiepoints" value="1"/>
+      <property name="accuracy_cameras" value="10"/>
+      <property name="accuracy_cameras_ypr" value="10"/>
+      <property name="accuracy_markers" value="0.0050000000000000001"/>
+      <property name="accuracy_scalebars" value="0.001"/>
+      <property name="accuracy_projections" value="0.5"/>
+    </settings>
+    <meta>
+      <property name="AlignCameras/adaptive_fitting" value="true"/>
+      <property name="AlignCameras/cameras" value=""/>
+      <property name="AlignCameras/duration" value="0.224"/>
+      <property name="AlignCameras/min_image" value="2"/>
+      <property name="AlignCameras/ram_used" value="696320"/>
+      <property name="AlignCameras/reset_alignment" value="false"/>
+      <property name="AlignCameras/subdivide_task" value="true"/>
+      <property name="OptimizeCameras/adaptive_fitting" value="true"/>
+      <property name="OptimizeCameras/duration" value="0.018"/>
+      <property name="OptimizeCameras/fit_flags" value="f"/>
+      <property name="OptimizeCameras/sigma0" value="0.248164959399797"/>
+    </meta>
+  </chunk>
+</document>
