@@ -1,20 +1,20 @@
 [submodule "Pinopticap"]
-	path = core/server/Pinopticap
+	path = core/Pinopticap
 	url = https://github.com/n1ckfg/Pinopticap
 [submodule "Pinopticam"]
-	path = core/mipicam/Pinopticam
+	path = core/Pinopticam
 	url = https://github.com/n1ckfg/Pinopticam
 [submodule "Pinoptigrab"]
-	path = core/webcam/Pinoptigrab
+	path = core/Pinoptigrab
 	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
-	path = core/realsense/Pinoptisense
+	path = core/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
-	path = core/server/Pinoptimon
+	path = core/Pinoptimon
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
-	path = core/skeleton/Pinoptipose
+	path = core/Pinoptipose
 	url = https://github.com/n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
 	path = experimental/PiXtionApps
