@@ -58,7 +58,7 @@ namespace PinopticonUtils {
         imageToBuffer(img, buffer, quality);
     }
 
-    void floatsToBuffer(float[]& data, ofBuffer& buffer) {
+    void floatsToBuffer(float* data, ofBuffer& buffer) {
         char const * fChars = reinterpret_cast<char const *>(data);
         std::string fString(fChars, fChars + sizeof data);
         buffer.set(fString); 
