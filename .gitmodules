@@ -8,13 +8,13 @@
 	path = core/Pinoptigrab
 	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
-	path = core/Pinoptisense
+	path = extra/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
 	path = core/Pinoptimon
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
-	path = core/Pinoptipose
+	path = extra/Pinoptipose
 	url = https://github.com/n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
 	path = PiXtionApps
