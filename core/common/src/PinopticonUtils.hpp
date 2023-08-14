@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxOsc.h"
 
 namespace PinopticonUtils {
 
@@ -68,6 +69,61 @@ namespace PinopticonUtils {
         return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
       }
       return 0.0;
+    }
+
+    // ~ ~ ~ OSC ~ ~ ~
+
+    void sendOscVideo(string hostName, string sessionId, ofBuffer& videobuffer, int timestamp) {
+        ofxOscMessage m;
+        m.setAddress("/video");
+
+        m.addStringArg(hostName);    
+        m.addStringArg(sessionId);    
+        m.addBlobArg(videoBuffer);
+        m.addIntArg(timestamp);
+        
+        sender.sendMessage(m);
+    }
+
+    void sendOscBlobs(string hostName, string sessionId, int index, float x, float y, int timestamp) {
+        ofxOscMessage m;
+        m.setAddress("/blob"); // ssiffi
+
+        m.addStringArg(hostName);   
+        m.addStringArg(sessionId);
+        m.addIntArg(index);  
+        m.addFloatArg(x / (float) width);
+        m.addFloatArg(y / (float) height);
+        m.addIntArg(timestamp);
+
+        sender.sendMessage(m);
+    }
+
+    void sendOscContours(string hostName, string sessionId, int index, ofBuffer& contourColorBuffer, ofBuffer& contourPointsBuffer, int timestamp) {
+        ofxOscMessage m;
+        m.setAddress("/contour"); // ssibbi
+        
+        m.addStringArg(hostName);
+        m.addStringArg(sessionId);
+        m.addIntArg(index);
+        m.addBlobArg(contourColorBuffer);
+        m.addBlobArg(contourPointsBuffer);
+        m.addIntArg(timestamp);
+
+        sender.sendMessage(m);
+    }
+
+    void sendOscPixel(string hostName, string sessionId, float x, float y, int timestamp) {
+        ofxOscMessage m;
+        m.setAddress("/pixel"); // ssffi
+
+        m.addStringArg(hostName);   
+        m.addStringArg(sessionId);   
+        m.addFloatArg(x / (float) width);
+        m.addFloatArg(y / (float) height);
+        m.addIntArg(timestamp);
+        
+        sender.sendMessage(m);
     }
 
 }
