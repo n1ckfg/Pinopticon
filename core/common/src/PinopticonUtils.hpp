@@ -92,8 +92,8 @@ namespace PinopticonUtils {
         m.addStringArg(hostName);   
         m.addStringArg(sessionId);
         m.addIntArg(index);  
-        m.addFloatArg(x / (float) width);
-        m.addFloatArg(y / (float) height);
+        m.addFloatArg(x);
+        m.addFloatArg(y);
         m.addIntArg(timestamp);
 
         sender.sendMessage(m);
@@ -119,8 +119,8 @@ namespace PinopticonUtils {
 
         m.addStringArg(hostName);   
         m.addStringArg(sessionId);   
-        m.addFloatArg(x / (float) width);
-        m.addFloatArg(y / (float) height);
+        m.addFloatArg(x);
+        m.addFloatArg(y);
         m.addIntArg(timestamp);
         
         sender.sendMessage(m);
