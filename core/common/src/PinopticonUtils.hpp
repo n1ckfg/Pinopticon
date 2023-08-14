@@ -73,7 +73,7 @@ namespace PinopticonUtils {
 
     // ~ ~ ~ OSC ~ ~ ~
 
-    void sendOscVideo(string hostName, string sessionId, ofBuffer& videobuffer, int timestamp) {
+    void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videobuffer, int timestamp) {
         ofxOscMessage m;
         m.setAddress("/video");
 
@@ -85,7 +85,7 @@ namespace PinopticonUtils {
         sender.sendMessage(m);
     }
 
-    void sendOscBlobs(string hostName, string sessionId, int index, float x, float y, int timestamp) {
+    void sendOscBlobs(ofxOscSender& sender, string hostName, string sessionId, int index, float x, float y, int timestamp) {
         ofxOscMessage m;
         m.setAddress("/blob"); // ssiffi
 
@@ -99,7 +99,7 @@ namespace PinopticonUtils {
         sender.sendMessage(m);
     }
 
-    void sendOscContours(string hostName, string sessionId, int index, ofBuffer& contourColorBuffer, ofBuffer& contourPointsBuffer, int timestamp) {
+    void sendOscContours(ofxOscSender& sender, string hostName, string sessionId, int index, ofBuffer& contourColorBuffer, ofBuffer& contourPointsBuffer, int timestamp) {
         ofxOscMessage m;
         m.setAddress("/contour"); // ssibbi
         
@@ -113,7 +113,7 @@ namespace PinopticonUtils {
         sender.sendMessage(m);
     }
 
-    void sendOscPixel(string hostName, string sessionId, float x, float y, int timestamp) {
+    void sendOscPixel(ofxOscSender& sender, string hostName, string sessionId, float x, float y, int timestamp) {
         ofxOscMessage m;
         m.setAddress("/pixel"); // ssffi
 
