@@ -4,23 +4,22 @@
 
 namespace PinopticonUtils {
 
-    string createCompName(string compname) {
-        ofFile file;
-        ofBuffer buff;
-        
-        file.open(ofToDataPath("compname.txt"), ofFile::ReadWrite, false);
-        if (file) {
-            buff = file.readToBuffer();
-            compname = buff.getText();
-        } else {
-            compname += "_" + ofGetTimestampString("%y%m%d%H%M%S%i");
-            ofStringReplace(compname, "\n", "");
-            ofStringReplace(compname, "\r", "");
-            buff.set(compname.c_str(), compname.size());
-            ofBufferToFile("compname.txt", buff);
-        }
-        
-        return compname;
+    string ofApp::cleanString(string input) {
+        ofStringReplace(input, "\n", "");
+        ofStringReplace(input, "\r", ""); 
+        return input;   
+    }
+
+    // a randomly generated id that isn't saved
+    string ofApp::getSessionId() {
+        string sessionId = "RPi_" + ofGetTimestampString("%y%m%d%H%M%S%i");
+        return cleanString(sessionId);
+    }
+
+    // the RPi network hostname 
+    string ofApp::getHostName() {
+        ofBuffer hostNameFile = ofBufferFromFile("/etc/hostname");
+        return cleanString(hostNameFile.getText());
     }
 
     void imageToBuffer(ofImage& img, ofBuffer& buffer, int quality) {
@@ -56,22 +55,6 @@ namespace PinopticonUtils {
         fbo.readToPixels(pixels);
         img.setFromPixels(pixels);
         imageToBuffer(img, buffer, quality);
-    }
-
-    string sessionId(int len) {
-    	long seed = long(ofRandom(0, 1000000));
-    	cout << seed << "   "; 
-    	srand(seed);
-    	string str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    	string newstr;
-    	int pos;
-    	while((int)newstr.size() != len) {
-    	   pos = ((rand() % (str.size() - 1)));
-    	   newstr += str.substr(pos,1);
-    	}
-
-    	cout << newstr << "\n";
-    	return newstr;
     }
 
     float rawDepthToMeters(int depthValue) {
