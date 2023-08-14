@@ -8,13 +8,13 @@
 	path = core/Pinoptigrab
 	url = https://github.com/n1ckfg/Pinoptigrab
 [submodule "Pinoptisense"]
-	path = extra/Pinoptisense
+	path = experimental/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
 	path = core/Pinoptimon
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
-	path = extra/Pinoptipose
+	path = experimental/Pinoptipose
 	url = https://github.com/n1ckfg/Pinoptipose
 [submodule "PiXtionApps"]
 	path = PiXtionApps
@@ -27,38 +27,38 @@
 	url = https://github.com/n1ckfg/PiVideoApps
 
 [submodule "tools/pi-midi-tools"]
-	path = experiments/pi-midi-tools
+	path = experimental/pi-midi-tools
 	url = https://github.com/n1ckfg/pi-midi-tools
 [submodule "pd/PdPitcher"]
-	path = experiments/PdPitcher
+	path = experimental/PdPitcher
 	url = https://github.com/n1ckfg/PdPitcher
 [submodule "tools/rpi_tensorflow_lite"]
-	path = experiments/rpi_tensorflow_lite
+	path = experimental/rpi_tensorflow_lite
 	url = https://github.com/n1ckfg/rpi_tensorflow_lite
 [submodule "omx/PiStreamCam"]
-	path = experiments/PiStreamCam
+	path = experimental/PiStreamCam
 	url = https://github.com/n1ckfg/PiStreamCam
 [submodule "tools/PiDisplaceExample"]
-	path = experiments/PiDisplaceExample
+	path = experimental/PiDisplaceExample
 	url = https://github.com/n1ckfg/PiDisplaceExample
 [submodule "omx/PiHoleCam"]
-	path = experiments/PiHoleCam
+	path = experimental/PiHoleCam
 	url = https://github.com/n1ckfg/PiHoleCam
 [submodule "deprecated/PiMocapCam"]
-	path = experiments/PiMocapCam
+	path = experimental/PiMocapCam
 	url = https://github.com/n1ckfg/PiMocapCam
 [submodule "deprecated/PiMocapUnity"]
-	path = experiments/PiMocapUnity
+	path = experimental/PiMocapUnity
 	url = https://github.com/n1ckfg/PiMocapUnity
 [submodule "mipicam/PiDoubleCam"]
-	path = experiments/PiDoubleCam
+	path = experimental/PiDoubleCam
 	url = https://github.com/n1ckfg/PiDoubleCam
 [submodule "mipicam/PiProjectorCam"]
-	path = experiments/PiProjectorCam
+	path = experimental/PiProjectorCam
 	url = https://github.com/n1ckfg/PiProjectorCam
 [submodule "mipicam/PiDirCam"]
-	path = experiments/PiDirCam
+	path = experimental/PiDirCam
 	url = https://github.com/n1ckfg/PiDirCam
 [submodule "experimental/tools/pinopticap_ray_test"]
-	path = experiments/pinopticap_ray_test
+	path = experimental/pinopticap_ray_test
 	url = https://github.com/n1ckfg/pinopticap_ray_test
