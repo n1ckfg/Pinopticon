@@ -4,20 +4,20 @@
 
 namespace PinopticonUtils {
 
-    string ofApp::cleanString(string input) {
+    string cleanString(string input) {
         ofStringReplace(input, "\n", "");
         ofStringReplace(input, "\r", ""); 
         return input;   
     }
 
     // a randomly generated id that isn't saved
-    string ofApp::getSessionId() {
+    string getSessionId() {
         string sessionId = "RPi_" + ofGetTimestampString("%y%m%d%H%M%S%i");
         return cleanString(sessionId);
     }
 
     // the RPi network hostname 
-    string ofApp::getHostName() {
+    string getHostName() {
         ofBuffer hostNameFile = ofBufferFromFile("/etc/hostname");
         return cleanString(hostNameFile.getText());
     }
