@@ -73,7 +73,7 @@ namespace PinopticonUtils {
 
     // ~ ~ ~ OSC ~ ~ ~
 
-    void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videobuffer, int timestamp) {
+    void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videoBuffer, int timestamp) {
         ofxOscMessage m;
         m.setAddress("/video");
 
