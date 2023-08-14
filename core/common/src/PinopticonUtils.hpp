@@ -43,6 +43,15 @@ namespace PinopticonUtils {
         }
     }
 
+    void bufferToImage(ofBuffer& buffer, ofImage& image, int w, int h, bool isRgb) {
+        if (isRgb) {
+            image.allocate(w, h, OF_IMAGE_COLOR);
+        } else {
+            image.allocate(w, h, OF_IMAGE_GRAYSCALE);
+        }
+        image.load(buffer);
+    }
+
     void pixelsToBuffer(ofPixels& pixels, ofBuffer& buffer, int quality) {
         ofImage img;
         img.setFromPixels(pixels);
@@ -75,7 +84,7 @@ namespace PinopticonUtils {
 
     void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videoBuffer, int timestamp) {
         ofxOscMessage m;
-        m.setAddress("/video");
+        m.setAddress("/video"); // ssbi
 
         m.addStringArg(hostName);    
         m.addStringArg(sessionId);    
@@ -94,6 +103,21 @@ namespace PinopticonUtils {
         m.addIntArg(index);  
         m.addFloatArg(x);
         m.addFloatArg(y);
+        m.addIntArg(timestamp);
+
+        sender.sendMessage(m);
+    }
+
+    void sendOscBlobs(ofxOscSender& sender, string hostName, string sessionId, int index, float x, float y, float z, int timestamp) {
+        ofxOscMessage m;
+        m.setAddress("/blob"); // ssifffi
+
+        m.addStringArg(hostName);
+        m.addStringArg(sessionId);
+        m.addIntArg(index);
+        m.addFloatArg(x);
+        m.addFloatArg(y);
+        m.addFloatArg(z);
         m.addIntArg(timestamp);
 
         sender.sendMessage(m);
