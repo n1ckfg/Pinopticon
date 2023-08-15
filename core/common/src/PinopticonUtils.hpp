@@ -27,11 +27,13 @@ namespace PinopticonUtils {
     }
 
     int getTimestamp() {
+        int returns = 0;
 #if OF_VERSION_MAJOR >= oldVersionCheckMajor && OF_VERSION_MINOR >= oldVersionCheckMinor
-		return (int) ofGetSystemTimeMillis();   
+		returns = (int) ofGetSystemTimeMillis();   
 #else
-        return (int) ofGetSystemTime();         
+        returns = (int) ofGetSystemTime();         
 #endif
+        return returns;
     }
 
 
