@@ -67,12 +67,6 @@ namespace PinopticonUtils {
         imageToBuffer(img, buffer, quality);
     }
 
-    void floatsToBuffer(float* data, ofBuffer& buffer) {
-        char const * fChars = reinterpret_cast<char const *>(data);
-        std::string fString(fChars, fChars + sizeof data);
-        buffer.set(fString); 
-    }
-
     float rawDepthToMeters(int depthValue) {
       if (depthValue < 2047) {
         return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
