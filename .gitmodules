@@ -62,3 +62,9 @@
 [submodule "experimental/tools/pinopticap_ray_test"]
 	path = experimental/pinopticap_ray_test
 	url = https://github.com/n1ckfg/pinopticap_ray_test
+[submodule "experimental/PilencerCam"]
+	path = experimental/PilencerCam
+	url = https://github.com/n1ckfg/PilencerCam
+[submodule "experimental/JetstreamKinect"]
+	path = experimental/JetstreamKinect
+	url = https://github.com/n1ckfg/JetstreamKinect
