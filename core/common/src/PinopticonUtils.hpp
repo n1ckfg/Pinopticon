@@ -29,7 +29,7 @@ namespace PinopticonUtils {
     }
 
     int getTimestamp() {
-		(int) ofGetSystemTimeMillis();   
+		return (int) ofGetSystemTimeMillis();   
     }
 
 
