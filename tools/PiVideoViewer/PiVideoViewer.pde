@@ -10,7 +10,7 @@ void setup() {
 void draw() {
   background(0);
   if (videoBytes != null) img = fromJpeg(videoBytes);
-  image(img, 0, 0);
+  image(img, 0, 0, width, height);
   
   surface.setTitle("" + frameRate);  
 }
