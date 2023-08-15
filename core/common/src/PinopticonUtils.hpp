@@ -1,7 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxCv.h"
 #include "ofxOsc.h"
+#include "ofxXmlSettings.h"
+#include "ofxHTTP.h"
+#include "ofxJSONElement.h"
+#include "ofxCrypto.h"
 
 namespace PinopticonUtils {
 
@@ -23,6 +28,13 @@ namespace PinopticonUtils {
         return cleanString(hostNameFile.getText());
     }
 
+    int getTimestamp() {
+		(int) ofGetSystemTimeMillis();   
+    }
+
+
+    // ~ ~ ~ TO BUFFER ~ ~ ~
+
     void imageToBuffer(ofImage& img, ofBuffer& buffer, int quality) {
         switch(quality) {
             case 5:
@@ -43,15 +55,6 @@ namespace PinopticonUtils {
         }
     }
 
-    void bufferToImage(ofBuffer& buffer, ofImage& image, int w, int h, bool isRgb) {
-        if (isRgb) {
-            image.allocate(w, h, OF_IMAGE_COLOR);
-        } else {
-            image.allocate(w, h, OF_IMAGE_GRAYSCALE);
-        }
-        image.load(buffer);
-    }
-
     void pixelsToBuffer(ofPixels& pixels, ofBuffer& buffer, int quality) {
         ofImage img;
         img.setFromPixels(pixels);
@@ -67,12 +70,35 @@ namespace PinopticonUtils {
         imageToBuffer(img, buffer, quality);
     }
 
+    // silently fails
+    void floatsToBuffer(float* data, ofBuffer& buffer) {
+        char const * fChars = reinterpret_cast<char const *>(data);
+        std::string fString(fChars, fChars + sizeof data);
+        buffer.set(fString); 
+    }
+
+
+    // ~ ~ ~ FROM BUFFER ~ ~ ~
+
+    void bufferToImage(ofBuffer& buffer, ofImage& image, int w, int h, bool isRgb) {
+        if (isRgb) {
+            image.allocate(w, h, OF_IMAGE_COLOR);
+        } else {
+            image.allocate(w, h, OF_IMAGE_GRAYSCALE);
+        }
+        image.load(buffer);
+    }
+
+
+    // ~ ~ ~ 3D ~ ~ ~
+
     float rawDepthToMeters(int depthValue) {
       if (depthValue < 2047) {
         return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
       }
       return 0.0;
     }
+
 
     // ~ ~ ~ OSC ~ ~ ~
 
