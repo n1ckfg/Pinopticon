@@ -1,12 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxCv.h"
 #include "ofxOsc.h"
-#include "ofxXmlSettings.h"
-#include "ofxHTTP.h"
-#include "ofxJSONElement.h"
-#include "ofxCrypto.h"
 
 namespace PinopticonUtils {
 
