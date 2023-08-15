@@ -5,6 +5,9 @@
 
 namespace PinopticonUtils {
 
+    const int oldVersionCheckMajor = 0;
+    const int oldVersionCheckMinor = 9;
+
     string cleanString(string input) {
         ofStringReplace(input, "\n", "");
         ofStringReplace(input, "\r", ""); 
@@ -24,7 +27,11 @@ namespace PinopticonUtils {
     }
 
     int getTimestamp() {
+#if OF_VERSION_MAJOR >= oldVersionCheckMajor && OF_VERSION_MINOR >= oldVersionCheckMinor
 		return (int) ofGetSystemTimeMillis();   
+#elif
+        return (int) ofGetSystemTime();         
+#endif
     }
 
 
@@ -75,6 +82,8 @@ namespace PinopticonUtils {
 
     // ~ ~ ~ FROM BUFFER ~ ~ ~
 
+// TODO find alternative for loading buffer into image
+#if OF_VERSION_MAJOR >= oldVersionCheckMajor && OF_VERSION_MINOR >= oldVersionCheckMinor
     void bufferToImage(ofBuffer& buffer, ofImage& image, int w, int h, bool isRgb) {
         if (isRgb) {
             image.allocate(w, h, OF_IMAGE_COLOR);
@@ -83,7 +92,7 @@ namespace PinopticonUtils {
         }
         image.load(buffer);
     }
-
+#endif
 
     // ~ ~ ~ 3D ~ ~ ~
 
