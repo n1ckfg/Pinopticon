@@ -5,9 +5,6 @@
 
 namespace PinopticonUtils {
 
-    const int oldVersionCheckMajor = 0;
-    const int oldVersionCheckMinor = 9;
-
     string cleanString(string input) {
         ofStringReplace(input, "\n", "");
         ofStringReplace(input, "\r", ""); 
@@ -28,7 +25,7 @@ namespace PinopticonUtils {
 
     int getTimestamp() {
         int returns = 0;
-#if OF_VERSION_MAJOR >= oldVersionCheckMajor && OF_VERSION_MINOR >= oldVersionCheckMinor
+#if OF_VERSION_MAJOR >= 0 && OF_VERSION_MINOR >= 10
 		returns = (int) ofGetSystemTimeMillis();   
 #else
         returns = (int) ofGetSystemTime();         
@@ -90,7 +87,7 @@ namespace PinopticonUtils {
         } else {
             image.allocate(w, h, OF_IMAGE_GRAYSCALE);
         }
-#if OF_VERSION_MAJOR >= oldVersionCheckMajor && OF_VERSION_MINOR >= oldVersionCheckMinor
+#if OF_VERSION_MAJOR >= 0 && OF_VERSION_MINOR >= 10
         image.load(buffer);
 #else
         cout << "Find alternative for loading buffer into image on older oF versions" << endl;
