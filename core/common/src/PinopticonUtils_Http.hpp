@@ -31,11 +31,13 @@ namespace PinopticonUtils {
     // * post form *
     // https://bakercp.github.io/ofxHTTP/classofx_1_1_h_t_t_p_1_1_simple_post_server_settings.html
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/src/PostRoute.cpp
-    void setupHttp(ofxHTTP::SimplePostServer& postServer, int postPort, string uploadRedirect) {
+    template <class ListenerClass>
+    void setupHttp(ListenerClass* listener, ofxHTTP::SimplePostServer& postServer, int postPort, string uploadRedirect) {
         ofxHTTP::SimplePostServerSettings postSettings;
         postSettings.setPort(postPort);
         postSettings.postRouteSettings.setUploadRedirect(uploadRedirect); // default "result.html"
         postServer.setup(postSettings);
+        postServer.postRoute().registerPostEvents(listener);
         postServer.start();
         cout << "Starting HTTP server on port " << postPort << endl;
     }
