@@ -44,10 +44,12 @@ namespace PinopticonUtils {
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/include/ofx/HTTP/WebSocketConnection.h
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/src/WebSocketConnection.cpp
     // events: connect, open, close, idle, message, broadcast        
-    void setupWs(ofxHTTP::SimpleWebSocketServer& wsServer, int wsPort) {
+    template <class ListenerClass>
+    void setupWs(ListenerClass* listener, ofxHTTP::SimpleWebSocketServer& wsServer, int wsPort) {
         ofxHTTP::SimpleWebSocketServerSettings wsSettings;
         wsSettings.setPort(wsPort);
         wsServer.setup(wsSettings);
+        wsServer.webSocketRoute().registerWebSocketEvents(listener);
         wsServer.start();
         cout << "Starting websocket server on " << wsPort << endl;
     }
