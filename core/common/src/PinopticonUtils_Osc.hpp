@@ -7,7 +7,7 @@ namespace PinopticonUtils {
 
     void setupOsc(ofxOscSender& sender, string& oscHost, int oscPort) {
         sender.setup(oscHost, oscPort);
-        cout << "Sending OSC to " << oscHost << ":" << oscPort << endl;
+        cout << "Sending OSC to " << oscHost << " on port: " << oscPort << endl;
     }
 
     void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videoBuffer, int timestamp) {
