@@ -18,7 +18,7 @@ namespace PinopticonUtils {
         streamSettings.setPort(streamPort);
         streamSettings.ipVideoRouteSettings.setMaxClientConnections(maxClientConnections); // default 5
         streamSettings.ipVideoRouteSettings.setMaxClientBitRate(maxClientBitRate); // default 1024
-        streamSettings.ipVideoRouteSettings.setMaxClientFrameRate(maxMaxClientFrameRate); // default 30
+        streamSettings.ipVideoRouteSettings.setMaxClientFrameRate(maxClientFrameRate); // default 30
         streamSettings.ipVideoRouteSettings.setMaxClientQueueSize(maxClientQueueSize); // default 10
         streamSettings.ipVideoRouteSettings.setMaxStreamWidth(maxStreamWidth); // default 1920
         streamSettings.ipVideoRouteSettings.setMaxStreamHeight(maxStreamHeight); // default 1080
@@ -36,7 +36,6 @@ namespace PinopticonUtils {
         postSettings.setPort(postPort);
         postSettings.postRouteSettings.setUploadRedirect(uploadRedirect); // default "result.html"
         postServer.setup(postSettings);
-        postServer.postRoute().registerPostEvents(this);
         postServer.start();
         cout << "Starting HTTP server on port " << postPort << endl;
     }
@@ -45,11 +44,10 @@ namespace PinopticonUtils {
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/include/ofx/HTTP/WebSocketConnection.h
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/src/WebSocketConnection.cpp
     // events: connect, open, close, idle, message, broadcast        
-    void setupWs(ofxHTTP::SimpleWebSocketServer& wsServer, int wsPport) {
-        wsSettings.setPort(wsPort);
+    void setupWs(ofxHTTP::SimpleWebSocketServer& wsServer, int wsPort) {
         ofxHTTP::SimpleWebSocketServerSettings wsSettings;
+        wsSettings.setPort(wsPort);
         wsServer.setup(wsSettings);
-        wsServer.webSocketRoute().registerWebSocketEvents(this);
         wsServer.start();
         cout << "Starting websocket server on " << wsPort << endl;
     }

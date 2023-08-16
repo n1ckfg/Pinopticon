@@ -5,7 +5,7 @@
 
 namespace PinopticonUtils {
 
-    void setupOsc(ofxOscSender& sender, string oscHost, int oscPort) {
+    void setupOsc(ofxOscSender& sender, string& oscHost, int oscPort) {
         sender.setup(oscHost, oscPort);
         cout << "Sending OSC to " << oscHost << ":" << oscPort << endl;
     }
