@@ -1,5 +1,5 @@
 [submodule "Pinopticap"]
-	path = core/Pinopticap
+	path = core/Pinoptimon
 	url = https://github.com/n1ckfg/Pinopticap
 [submodule "Pinopticam"]
 	path = core/Pinopticam
@@ -11,7 +11,7 @@
 	path = experimental/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
-	path = core/Pinoptimon
+	path = core/Pinopticap
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
 	path = experimental/Pinoptipose
