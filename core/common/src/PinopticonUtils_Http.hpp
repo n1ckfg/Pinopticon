@@ -24,7 +24,7 @@ namespace PinopticonUtils {
         streamSettings.ipVideoRouteSettings.setMaxStreamHeight(maxStreamHeight); // default 1080
         streamSettings.fileSystemRouteSettings.setDefaultIndex(defaultIndex); // default "live_view.html"
         streamServer.setup(streamSettings);
-        cout << "Starting MJPEG stream..." << endl;
+        cout << "\nStarting MJPEG stream..." << endl;
         streamServer.start();
     }
 
@@ -38,7 +38,7 @@ namespace PinopticonUtils {
         postSettings.postRouteSettings.setUploadRedirect(uploadRedirect); // default "result.html"
         postServer.setup(postSettings);
         postServer.postRoute().registerPostEvents(listener);
-        cout << "Starting HTTP server..." << endl;
+        cout << "\nStarting HTTP server..." << endl;
         postServer.start();
     }
 
@@ -52,7 +52,7 @@ namespace PinopticonUtils {
         wsSettings.setPort(wsPort);
         wsServer.setup(wsSettings);
         wsServer.webSocketRoute().registerWebSocketEvents(listener);
-        cout << "Starting websocket server..." << endl;
+        cout << "\nStarting websocket server..." << endl;
         wsServer.start();
     }
     
