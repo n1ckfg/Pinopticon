@@ -11,7 +11,7 @@
 	path = experimental/Pinoptisense
 	url = https://github.com/n1ckfg/Pinoptisense
 [submodule "Pinoptimon"]
-	path = core/Pinoptimon
+	path = experimental/Pinoptimon
 	url = https://github.com/n1ckfg/Pinoptimon
 [submodule "Pinoptipose"]
 	path = experimental/Pinoptipose
