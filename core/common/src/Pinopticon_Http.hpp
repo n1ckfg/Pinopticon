@@ -47,13 +47,29 @@ namespace Pinopticon {
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/src/WebSocketConnection.cpp
     // events: connect, open, close, idle, message, broadcast        
     template <class ListenerClass>
-    void setupWs(ListenerClass* listener, ofxHTTP::SimpleWebSocketServer& wsServer, int wsPort) {
+    void setupWsServer(ListenerClass* listener, ofxHTTP::SimpleWebSocketServer& wsServer, int wsPort) {
         ofxHTTP::SimpleWebSocketServerSettings wsSettings;
         wsSettings.setPort(wsPort);
         wsServer.setup(wsSettings);
         wsServer.webSocketRoute().registerWebSocketEvents(listener);
         cout << "\nStarting websocket server..." << endl;
         wsServer.start();
+    }
+
+    bool setupWsClient(Poco::Net::WebSocket& wsClient, string name, int wsPort) {
+        Poco::Net::HTTPClientSession websocket(name, wsPort);    
+        Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_GET, "/?encoding=text",Poco::Net::HTTPMessage::HTTP_1_1);
+        request.set("origin", "http://www.websocket.org");
+        Poco::Net::HTTPResponse response;
+        
+        try {
+            wsClient = new Poco::Net::WebSocket(websocket, request, response);
+            cout << "\nWebsocket client connecting to ws://" + name << " on port " << wsPort << endl;
+            return true;
+        } catch (std::exception &e) {
+            cout << "Exception " << e.what();
+            return false;
+        }
     }
     
     // ~ ~ ~ WS ~ ~ ~

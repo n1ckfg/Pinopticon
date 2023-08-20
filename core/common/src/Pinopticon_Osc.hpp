@@ -5,9 +5,14 @@
 
 namespace Pinopticon {
 
-    void setupOsc(ofxOscSender& sender, string& oscHost, int oscPort) {
-        sender.setup(oscHost, oscPort);
-        cout << "\nSending OSC to " << oscHost << " on port: " << oscPort << endl;
+    void setupOscSender(ofxOscSender& sender, string& oscSendHost, int oscSendPort) {
+        sender.setup(oscSendHost, oscSendPort);
+        cout << "\nSending OSC to " << oscSendHost << " on port: " << oscSendPort << endl;
+    }
+
+    void setupOscReceiver(ofxOscReceiver& receiver, int oscReceivePort) {
+        receiver.setup(oscReceivePort);
+        cout << "\nReceiving OSC on port: " << oscReceivePort << endl;
     }
 
     void sendOscVideo(ofxOscSender& sender, string hostName, string sessionId, ofBuffer& videoBuffer, int timestamp) {
