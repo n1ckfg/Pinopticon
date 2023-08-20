@@ -63,7 +63,7 @@ namespace Pinopticon {
         Poco::Net::HTTPResponse response;
         
         try {
-            wsClient = new Poco::Net::WebSocket(websocket, request, response);
+            wsClient = Poco::Net::WebSocket(websocket, request, response);
             cout << "\nWebsocket client connecting to ws://" + name << " on port " << wsPort << endl;
             return true;
         } catch (std::exception &e) {
