@@ -8,7 +8,7 @@
 // Don't include this unless you need it--ofxHTTP has many dependencies and
 // may make your project less portable.
 
-namespace PinopticonUtils {
+namespace Pinopticon {
 
     // * stream video *
     // https://github.com/bakercp/ofxHTTP/blob/master/libs/ofxHTTP/include/ofx/HTTP/IPVideoRoute.h

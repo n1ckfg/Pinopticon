@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-namespace PinopticonUtils {
+namespace Pinopticon {
 
     string cleanString(string input) {
         ofStringReplace(input, "\n", "");

@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 
-namespace PinopticonUtils {
+namespace Pinopticon {
 
     void setupOsc(ofxOscSender& sender, string& oscHost, int oscPort) {
         sender.setup(oscHost, oscPort);
