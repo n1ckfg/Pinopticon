@@ -56,14 +56,15 @@ namespace Pinopticon {
         wsServer.start();
     }
 
+    /*
     bool setupWsClient(Poco::Net::WebSocket& wsClient, string name, int wsPort) {
         Poco::Net::HTTPClientSession websocket(name, wsPort);    
-        Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_GET, "/?encoding=text",Poco::Net::HTTPMessage::HTTP_1_1);
+        Poco::Net::HTTPRequest request(Poco::Net::HTTPRequest::HTTP_GET, "/?encoding=text", Poco::Net::HTTPMessage::HTTP_1_1);
         request.set("origin", "http://www.websocket.org");
         Poco::Net::HTTPResponse response;
         
         try {
-            wsClient = Poco::Net::WebSocket(websocket, request, response);
+            wsClient = new Poco::Net::WebSocket(websocket, request, response);
             cout << "\nWebsocket client connecting to ws://" + name << " on port " << wsPort << endl;
             return true;
         } catch (std::exception &e) {
@@ -71,9 +72,8 @@ namespace Pinopticon {
             return false;
         }
     }
+    */
     
-    // ~ ~ ~ WS ~ ~ ~
-
     void sendWsVideo(ofxHTTP::SimpleWebSocketServer& wsServer, string hostName, string sessionId, ofBuffer& videoBuffer, int timestamp) { 
         string msg = "{\"unique_id\":\"" + sessionId + "\",\"hostname\":\"" + hostName + "\",\"video\":\"" + ofxCrypto::base64_encode(videoBuffer) + "\",\"timestamp\":\"" + ofToString(timestamp) + "\"}";
         wsServer.webSocketRoute().broadcast(ofxHTTP::WebSocketFrame(cleanString(msg)));

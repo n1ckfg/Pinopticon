@@ -1,0 +1,11 @@
+{
+	"name": "viewer",
+	"version": "1.0.0",
+	"dependencies": {
+		"child_process": "^1.0.2",
+		"dotenv": "^8.0.0",
+		"express": "^4.10.2",
+		"request": "^2.88.2",
+		"socket.io": "^1.2.0"
+	}
+}
