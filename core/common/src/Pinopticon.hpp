@@ -18,8 +18,30 @@ namespace Pinopticon {
 
     // the RPi network hostname 
     string getHostName() {
-        ofBuffer hostNameFile = ofBufferFromFile("/etc/hostname");
-        return cleanString(hostNameFile.getText());
+        string returns;
+        ofBuffer hostNameFile;
+
+        try {
+#ifdef TARGET_OSX
+            returns = cleanString(ofSystem("hostname"));
+            returns = ofSplitString(returns, ".")[0];
+#endif
+#ifdef TARGET_WIN32
+            returns = cleanString(ofSystem("hostname"));
+            returns = ofSplitString(returns, ".")[0];
+#endif
+#ifdef TARGET_LINUX
+            hostNameFile = ofBufferFromFile("/etc/hostname");
+            returns = cleanString(hostNameFile.getText());
+#endif
+        } catch (std::exception &e) {
+            cout << "Exception: " << e.what() << endl;
+        }
+
+        if (returns.size() < 1) returns = "unknown";            
+
+        cout << "Hostname: " << returns << endl;
+        return returns;
     }
 
     int getTimestamp() {
