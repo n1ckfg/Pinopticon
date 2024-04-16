@@ -17,7 +17,6 @@ void setup() {
   strokesBuffer = new ArrayList<Stroke>();
   frame = new Frame(strokesBuffer);
   oscSetup();
-  //wsSetup();
   fps = int((1.0/float(fps)) * 1000);
 }
 
@@ -28,7 +27,6 @@ void draw() {
   if (time > markTime + fps) {
     markTime = time;
     frame = new Frame(strokesBuffer);
-    //strokesBuffer = new ArrayList<Stroke>();
   }
   
   frame.draw();
