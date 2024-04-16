@@ -68,3 +68,6 @@
 [submodule "experimental/JetstreamKinect"]
 	path = experimental/JetstreamKinect
 	url = https://github.com/n1ckfg/JetstreamKinect
+[submodule "experimental/Pinoptiurg"]
+	path = experimental/Pinoptiurg
+	url = https://github.com/n1ckfg/Pinoptiurg
