@@ -21,22 +21,22 @@ void oscSetup() {
 
 // Receive message example
 void oscEvent(OscMessage msg) {
-  println(msg);
+  //println(msg);
   if (msg.checkAddrPattern("/lidar") && msg.checkTypetag("ssibi")) {    
     int index = msg.get(2).intValue();
     byte[] readPointsBytes = msg.get(3).blobValue();
-   
+    
     ArrayList<PVector> points = new ArrayList<PVector>();
-    for (int i = 0; i < readPointsBytes.length; i += 12) { //+=16) { 
-      byte[] bytesX = { readPointsBytes[i], readPointsBytes[i+1], readPointsBytes[i+2], readPointsBytes[i+3] };
-      byte[] bytesY = { readPointsBytes[i+4], readPointsBytes[i+5], readPointsBytes[i+6], readPointsBytes[i+7] };
-      byte[] bytesZ = { readPointsBytes[i+8], readPointsBytes[i+9], readPointsBytes[i+10], readPointsBytes[i+11] };
+    for (int i = 0; i < readPointsBytes.length; i += 4) { //+=16) { 
+      byte[] bytesY = { readPointsBytes[i], readPointsBytes[i+1], readPointsBytes[i+2], readPointsBytes[i+3] };
+      //byte[] bytesY = { readPointsBytes[i+4], readPointsBytes[i+5], readPointsBytes[i+6], readPointsBytes[i+7] };
+      //byte[] bytesZ = { readPointsBytes[i+8], readPointsBytes[i+9], readPointsBytes[i+10], readPointsBytes[i+11] };
 
-      float x = asFloat(bytesX);
-      float y = asFloat(bytesY);
-      float z = asFloat(bytesZ);
+      float x = i;
+      float y = asFloat(bytesY) * 255;
+      float z = 0;
 
-      if (!Float.isNaN(x) && !Float.isNaN(y)) { // && !Float.isNaN(z)) {
+      if (!Float.isNaN(x) && !Float.isNaN(y)) { // && !Float.isNaN(z)) {       
         PVector p = new PVector(x, y, z);
         points.add(p);
       }
