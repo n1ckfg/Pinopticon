@@ -74,6 +74,3 @@
 [submodule "experimental/Homographizer"]
 	path = experimental/Homographizer
 	url = https://github.com/n1ckfg/Homographizer
-[submodule "experimental/Pinoptiglue"]
-	path = experimental/Pinoptiglue
-	url = https://github.com/n1ckfg/Pinoptiglue
