@@ -77,3 +77,6 @@
 [submodule "core/Pinoptiglue"]
 	path = core/Pinoptiglue
 	url = https://github.com/n1ckfg/Pinoptiglue
+[submodule "experimental/colmap_reader"]
+	path = experimental/colmap_reader
+	url = https://github.com/n1ckfg/colmap_reader
