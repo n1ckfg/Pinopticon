@@ -80,3 +80,6 @@
 [submodule "experimental/colmap_reader"]
 	path = experimental/colmap_reader
 	url = https://github.com/n1ckfg/colmap_reader
+[submodule "experimental/PiLatkPlayer"]
+	path = experimental/PiLatkPlayer
+	url = https://github.com/n1ckfg/PiLatkPlayer
