@@ -83,3 +83,6 @@
 [submodule "experimental/PiLatkPlayer"]
 	path = experimental/PiLatkPlayer
 	url = https://github.com/n1ckfg/PiLatkPlayer
+[submodule "experimental/MicHorse"]
+	path = experimental/MicHorse
+	url = https://github.com/n1ckfg/MicHorse
