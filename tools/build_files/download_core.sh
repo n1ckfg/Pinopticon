@@ -1,15 +1,15 @@
 cd ../../core
 ls
 
-cd Pinopticam/bin
+cd Pinopticam
 bash get-bin.sh
 
-cd ../Pinoptigrab/bin
+cd ../Pinoptigrab
 bash get-bin.sh
 
-cd ../Pinopticap/bin
+cd ../Pinopticap
 bash get-bin.sh
 
-cd ../Pinoptiglue/bin
+cd ../Pinoptiglue
 bash get-bin.sh
 
