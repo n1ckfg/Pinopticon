@@ -2,32 +2,32 @@
 <img src="./docs/images/logo3.png"><br>
 Demo at https://vimeo.com/394259350 
 
-Four core apps:
+### Four core apps:
 
-### Pinopticam
+#### Pinopticam
 Stream video and tracking data using the RPi (MIPI) camera.
 
-### Pinoptigrab
+#### Pinoptigrab
 Access a USB camera.
 
-### Pinopticap
+#### Pinopticap
 Receive and manipulate tracking data.
 
-### Pinoptiglue
+#### Pinoptiglue
 Relay and combine video from multiple sources.
 
 
-And a lot more experimental apps, including:
+### And a lot more experimental apps, including:
 
-### Pinoptipose
+#### Pinoptipose
 Track a 2D skeleton.
 
-### Pinoptisense
+#### Pinoptisense
 Access a RealSense camera. 
 
-### Pinoptimon
+#### Pinoptimon
 Node.js-based prototyping.
 
-### Pinoptiurg
+#### Pinoptiurg
 Access a Hokuyo 2D lidar.
 
