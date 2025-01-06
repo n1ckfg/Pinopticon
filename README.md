@@ -4,8 +4,9 @@ Demo at https://vimeo.com/394259350
 
 ### Four core apps:
 
-#### Pinopticam
-Stream video and tracking data using the RPi (MIPI) camera.
+<ul>
+<li>Pinopticam: Stream video and tracking data using the RPi (MIPI) camera.</li>
+</ul>
 
 #### Pinoptigrab
 Access a USB camera.
