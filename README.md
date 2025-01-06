@@ -1,6 +1,6 @@
 # Pinopticon
 <img src="./docs/images/logo3.png"><br>
-<a href="https://vimeo.com/394259350">demo video</a><br> 
+demo videos: <a href="https://vimeo.com/394259350">[ 1 ]</a> <a href="https://vimeo.com/406810123">[ 2 ]</a> <a href="https://vimeo.com/552938349">[ 3 ]</a> <a href="https://vimeo.com/851987545">[4]</a><a href="https://vimeo.com/868718401">[ 5 ]</a><br> 
 <a href="https://docs.google.com/document/d/1SWL-JOeuY4peC_xsd7ARCZTshXlZcKad8DiNaIfZYdg/edit?tab=t.0">setup guide</a>
 
 #### Four core apps:
