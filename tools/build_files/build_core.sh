@@ -2,6 +2,7 @@ cd ../../core
 ls
 
 cd Pinopticam
+bash setup.sh
 make
 
 cd ../Pinoptigrab
